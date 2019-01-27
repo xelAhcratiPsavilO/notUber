@@ -19,7 +19,7 @@ function send() {
   .then(function(res){
     console.log(res);
   })
-  .catch(function(err)){
-    console.log(err)
-  }
+  .catch(function(err){
+    console.log(err);
+  });
 }
