@@ -23,4 +23,4 @@ app.use(bodyParser.urlencoded({ extended: true}));
 const port = 3000;
 
 // Start server
-const server = app.listen(port, () => console.log('Server started on port ${port}'));
+const server = app.listen(port, () => console.log(`Server started on ${port}`));
