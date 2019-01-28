@@ -93,6 +93,11 @@ app.get('/', (req, res) => {
 
 // END OF OPTION FOR SENDING TEXT FROM VIEW
 
+app.get('/response', (req, res) => {
+  // TODO: Confirm selection
+  res.send('Response processed');        
+});
+
 // Define port
 const port = 3000;
 
