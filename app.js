@@ -24,6 +24,13 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
+// The options
+const options = [
+  'Meh',
+  'Good',
+  'Great!'
+];
+
 // Index route
 app.get('/', (req, res) => {
   res.render('index');
