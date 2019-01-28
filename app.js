@@ -31,6 +31,13 @@ const options = [
   'Great!'
 ];
 
+// The message
+let notification = "How was your experience? " + "type 1 , 2 or 3: \n\n";
+
+options.forEach((option, index) => {
+  notification += `${index+1}. for ${option}\n`;
+});
+
 // Index route
 app.get('/', (req, res) => {
   res.render('index');
