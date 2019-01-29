@@ -93,9 +93,10 @@ app.get('/', (req, res) => {
 
 // END OF OPTION FOR SENDING TEXT FROM VIEW
 
+// End point for webhook to call
 app.get('/response', (req, res) => {
   // TODO: Confirm selection
-  res.send('Response processed');        
+  res.send('Response processed');
 });
 
 // Define port
