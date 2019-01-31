@@ -106,7 +106,7 @@ app.get('/response', (req, res) => {
 
   // if the response was valid though we confirm the selection
   if (satisfaction) {
-    message = `Thank you! Your level of satisfaction was ${day}`;        
+    message = `Thank you! Your level of satisfaction was ${satisfaction}`;        
   }
 
   send(req.query.msisdn, message);  res.send('Response processed');
