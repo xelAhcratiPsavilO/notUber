@@ -43,7 +43,7 @@ options.forEach((option, index) => {
 // Send the message from code to submitted phone
 app.post('/', (req, res) => {
   send(req.body.number, notification);
-  response.send('Notification sent');
+  res.send('Notification sent');
 });
 
 let send = function(number, content) {
