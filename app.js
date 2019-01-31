@@ -98,19 +98,29 @@ app.get('/response', (req, res) => {
   // TODO: store this selection somewhere in your database
 
   // parse the message the user sent us
+  console.log("AAAAAAA1");
   const selection = parseInt(req.query.text) - 1;
+  console.log("AAAAAAA2");
+
   const satisfaction = options[selection];
+  console.log("AAAAAAA3");
 
   // by default we will warn them to send us a valid response
   let message = "Please select from one of the valid options only.";
+  console.log("AAAAAAA4");
 
   // if the response was valid though we confirm the selection
   if (satisfaction) {
     message = `Thank you! Your level of satisfaction was ${satisfaction}`;
   }
+  console.log("AAAAAAA5");
 
   send(req.query.msisdn, message);
+  console.log("AAAAAAA6");
+
   res.send('Response processed');
+  console.log("AAAAAAA7");
+
 });
 
 // Define port
