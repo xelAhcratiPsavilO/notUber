@@ -98,12 +98,12 @@ app.get('/response', (req, res) => {
   // TODO: store this selection somewhere in your database
 
   // parse the message the user sent us
-  console.log("AAAAAAA1");
+  console.log("AAAAAAA1" + `${req.query.text}`);
   const selection = parseInt(req.query.text) - 1;
-  console.log("AAAAAAA2");
+  console.log("AAAAAAA2" + `${parseInt(req.query.text}`);
 
   const satisfaction = options[selection];
-  console.log("AAAAAAA3");
+  console.log("AAAAAAA3" + `${selection}`);
 
   // by default we will warn them to send us a valid response
   let message = "Please select from one of the valid options only.";
