@@ -103,7 +103,7 @@ app.get('/response', (req, res) => {
 const PORT = process.env.PORT || 5000;
 
 // Start server
-const server = app.listen(PORT, () => console.log(`Server started on ${ PORT }`);
+const server = app.listen(PORT, () => console.log(`Server started on ${ PORT }`));
 
 // Connect to socket.io
 const io = socketio(server);
