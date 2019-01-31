@@ -100,7 +100,7 @@ app.get('/response', (req, res) => {
   // parse the message the user sent us
   console.log("AAAAAAA1" + `${req.query.text}`);
   const selection = parseInt(req.query.text) - 1;
-  console.log("AAAAAAA2" + `${parseInt(req.query.text}`);
+  console.log("AAAAAAA2" + `${parseInt(req.query.text)}`);
 
   const satisfaction = options[selection];
   console.log("AAAAAAA3" + `${selection}`);
