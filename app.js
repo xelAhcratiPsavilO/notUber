@@ -95,8 +95,21 @@ app.get('/', (req, res) => {
 
 // End point for webhook to call
 app.get('/response', (req, res) => {
-  // TODO: Confirm selection
-  res.send('Response processed');
+  // TODO: store this selection somewhere in your database
+
+  // parse the message the user sent us
+  const selection = parseInt(req.query.text) - 1;
+  const satisfaction = options[selection];
+
+  // by default we will warn them to send us a valid response
+  let message = "Please select from one of the valid options only.";
+
+  // if the response was valid though we confirm the selection
+  if (satisfaction) {
+    message = `Thank you! Your level of satisfaction was ${day}`;        
+  }
+
+  send(req.query.msisdn, message);  res.send('Response processed');
 });
 
 // Define port
