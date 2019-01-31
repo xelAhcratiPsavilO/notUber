@@ -107,15 +107,15 @@ app.get('/response', (req, res) => {
 
   // by default we will warn them to send us a valid response
   let message = "Please select from one of the valid options only.";
-  console.log("AAAAAAA4");
+  console.log(`AAAAAAA4 ${satisfaction}`);
 
   // if the response was valid though we confirm the selection
   if (satisfaction) {
     message = `Thank you! Your level of satisfaction was ${satisfaction}`;
   }
-  console.log("AAAAAAA5");
+  console.log(`AAAAAAA5 ${message}`);
 
-  send(req.query.msisdn, message);
+  // send(req.query.msisdn, message);
   console.log("AAAAAAA6");
 
   res.send('Response processed');
