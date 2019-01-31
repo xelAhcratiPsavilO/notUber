@@ -113,15 +113,6 @@ app.get('/response', (req, res) => {
   res.send('Response processed');
 });
 
-// simple function around sending a message
-let send = function(number, message) {
-  nexmo.sms.sendTextMessage(
-    process.env.FROM,
-    number,
-    message
-  );
-}
-
 // Define port
 const PORT = process.env.PORT || 5000;
 
